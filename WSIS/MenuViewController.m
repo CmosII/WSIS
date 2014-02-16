@@ -14,7 +14,7 @@
 @interface MenuViewController ()
 {
     AppDelegate *appDelegate;
-    NSArray *menu1,*menu2,*menu3,*menu4,*menu5,*menu6,*Section,*sectionNames;
+    NSArray *menu1,*menu2,*menu3,*menu4,*menu5,*menu6,*menu7,*Section,*sectionNames;
 }
 @end
 
@@ -52,15 +52,16 @@
 {
     [super viewDidAppear:YES];
     
-    menu1 = [NSArray arrayWithObjects:@"About WSIS U.A.E", nil];
-    menu2 = [NSArray arrayWithObjects:@"About UAE ICT",@"Indicators and Statistics", nil];
-    menu3 = [NSArray arrayWithObjects:@"What is WSIS",@"Action Lines",@"Documents",@"Stocktaking",@"WSIS Project Prize 2013",@"WSIS Questionaire", nil];
-    menu4 = [NSArray arrayWithObjects:@"About the Committee",@"UAE WSIS Committee",@"Meetings",@"Documents & Publications", nil];
-    menu5 = [NSArray arrayWithObjects:@"Committee News", @"WSIS News", @"Image Gallery" ,nil];
-    menu6 = [NSArray arrayWithObjects:@"Important Links", nil];
+    menu1 = [NSArray arrayWithObjects:@"Login", nil];
+    menu2 = [NSArray arrayWithObjects:@"About WSIS U.A.E", nil];
+    menu3 = [NSArray arrayWithObjects:@"About UAE ICT",@"Indicators and Statistics", nil];
+    menu4 = [NSArray arrayWithObjects:@"What is WSIS",@"Action Lines",@"Documents",@"Stocktaking",@"WSIS Project Prize 2013",@"WSIS Questionaire", nil];
+    menu5 = [NSArray arrayWithObjects:@"About the Committee",@"UAE WSIS Committee",@"Meetings",@"Documents & Publications", nil];
+    menu6 = [NSArray arrayWithObjects:@"Committee News", @"WSIS News", @"Image Gallery" ,nil];
+    menu7 = [NSArray arrayWithObjects:@"Important Links", nil];
     
-    sectionNames = [NSArray arrayWithObjects:@"UAE initiatives",@"UAE ICT Development",@"WSIS",@"National Committee",@"Media",@"Links", nil];
-    Section = [NSArray arrayWithObjects:menu1,menu2,menu3,menu4,menu5,menu6, nil];
+    sectionNames = [NSArray arrayWithObjects:@"User Dashboard",@"UAE initiatives",@"UAE ICT Development",@"WSIS",@"National Committee",@"Media",@"Links", nil];
+    Section = [NSArray arrayWithObjects:menu1,menu2,menu3,menu4,menu5,menu6,menu7, nil];
 }
 
 - (void)didReceiveMemoryWarning

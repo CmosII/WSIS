@@ -37,6 +37,8 @@
 		811A094018A790B0003EAEA0 /* WSISUAEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 811A093F18A790B0003EAEA0 /* WSISUAEViewController.m */; };
 		811A094418A79774003EAEA0 /* AboutUAEICTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 811A094318A79774003EAEA0 /* AboutUAEICTViewController.m */; };
 		811A094A18A797F3003EAEA0 /* IndicatorsAndStatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 811A094918A797F3003EAEA0 /* IndicatorsAndStatisticsViewController.m */; };
+		8371EAB018B0DF9A008B58AE /* blue_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8371EAAF18B0DF9A008B58AE /* blue_icon.png */; };
+		8371EAB318B0E111008B58AE /* loginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8371EAB218B0E111008B58AE /* loginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +103,9 @@
 		811A094318A79774003EAEA0 /* AboutUAEICTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUAEICTViewController.m; sourceTree = "<group>"; };
 		811A094818A797F3003EAEA0 /* IndicatorsAndStatisticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndicatorsAndStatisticsViewController.h; sourceTree = "<group>"; };
 		811A094918A797F3003EAEA0 /* IndicatorsAndStatisticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndicatorsAndStatisticsViewController.m; sourceTree = "<group>"; };
+		8371EAAF18B0DF9A008B58AE /* blue_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue_icon.png; sourceTree = "<group>"; };
+		8371EAB118B0E111008B58AE /* loginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginViewController.h; sourceTree = "<group>"; };
+		8371EAB218B0E111008B58AE /* loginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +178,7 @@
 				811A092018A78A67003EAEA0 /* Side Menu */,
 				811A094718A797B9003EAEA0 /* UAE Initiatives */,
 				811A094618A79798003EAEA0 /* UAE ICT Development */,
+				8371EAB418B0E116008B58AE /* Log in */,
 			);
 			path = WSIS;
 			sourceTree = "<group>";
@@ -180,6 +186,7 @@
 		811A08E218A782F9003EAEA0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8371EAAE18B0DF6D008B58AE /* Media */,
 				811A08E318A782F9003EAEA0 /* WSIS-Info.plist */,
 				811A08E418A782F9003EAEA0 /* InfoPlist.strings */,
 				811A08E718A782F9003EAEA0 /* main.m */,
@@ -297,6 +304,24 @@
 			name = "Indicators and Statistics";
 			sourceTree = "<group>";
 		};
+		8371EAAE18B0DF6D008B58AE /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				8371EAAF18B0DF9A008B58AE /* blue_icon.png */,
+			);
+			name = Media;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		8371EAB418B0E116008B58AE /* Log in */ = {
+			isa = PBXGroup;
+			children = (
+				8371EAB118B0E111008B58AE /* loginViewController.h */,
+				8371EAB218B0E111008B58AE /* loginViewController.m */,
+			);
+			name = "Log in";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -376,6 +401,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8371EAB018B0DF9A008B58AE /* blue_icon.png in Resources */,
 				811A08F218A782F9003EAEA0 /* Main_iPad.storyboard in Resources */,
 				811A08F718A782F9003EAEA0 /* Images.xcassets in Resources */,
 				811A08EF18A782F9003EAEA0 /* Main_iPhone.storyboard in Resources */,
@@ -404,6 +430,7 @@
 				811A094A18A797F3003EAEA0 /* IndicatorsAndStatisticsViewController.m in Sources */,
 				811A091C18A7868E003EAEA0 /* UIImage+ImageWithUIView.m in Sources */,
 				811A091F18A78A61003EAEA0 /* MenuViewController.m in Sources */,
+				8371EAB318B0E111008B58AE /* loginViewController.m in Sources */,
 				811A093A18A78AA4003EAEA0 /* AFPropertyListRequestOperation.m in Sources */,
 				811A08EC18A782F9003EAEA0 /* AppDelegate.m in Sources */,
 				811A091B18A7868E003EAEA0 /* ECSlidingViewController.m in Sources */,
@@ -636,6 +663,7 @@
 				811A090F18A782F9003EAEA0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		811A091018A782F9003EAEA0 /* Build configuration list for PBXNativeTarget "WSISTests" */ = {
 			isa = XCConfigurationList;
@@ -644,6 +672,7 @@
 				811A091218A782F9003EAEA0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
