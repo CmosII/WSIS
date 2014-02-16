@@ -39,6 +39,10 @@
 		811A094A18A797F3003EAEA0 /* IndicatorsAndStatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 811A094918A797F3003EAEA0 /* IndicatorsAndStatisticsViewController.m */; };
 		8371EAB018B0DF9A008B58AE /* blue_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8371EAAF18B0DF9A008B58AE /* blue_icon.png */; };
 		8371EAB318B0E111008B58AE /* loginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8371EAB218B0E111008B58AE /* loginViewController.m */; };
+		8371EAB718B0E8AA008B58AE /* adminListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8371EAB618B0E8AA008B58AE /* adminListViewController.m */; };
+		8371EABB18B0E957008B58AE /* adminSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8371EABA18B0E957008B58AE /* adminSearchViewController.m */; };
+		8371EABF18B0F2CA008B58AE /* wsis-uae-logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8371EABE18B0F2CA008B58AE /* wsis-uae-logo.jpg */; };
+		8371EAC118B0F4D4008B58AE /* nav-bar-background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8371EAC018B0F4D4008B58AE /* nav-bar-background.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +110,12 @@
 		8371EAAF18B0DF9A008B58AE /* blue_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue_icon.png; sourceTree = "<group>"; };
 		8371EAB118B0E111008B58AE /* loginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginViewController.h; sourceTree = "<group>"; };
 		8371EAB218B0E111008B58AE /* loginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginViewController.m; sourceTree = "<group>"; };
+		8371EAB518B0E8AA008B58AE /* adminListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = adminListViewController.h; sourceTree = "<group>"; };
+		8371EAB618B0E8AA008B58AE /* adminListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = adminListViewController.m; sourceTree = "<group>"; };
+		8371EAB918B0E957008B58AE /* adminSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = adminSearchViewController.h; sourceTree = "<group>"; };
+		8371EABA18B0E957008B58AE /* adminSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = adminSearchViewController.m; sourceTree = "<group>"; };
+		8371EABE18B0F2CA008B58AE /* wsis-uae-logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "wsis-uae-logo.jpg"; sourceTree = "<group>"; };
+		8371EAC018B0F4D4008B58AE /* nav-bar-background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "nav-bar-background.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -307,6 +317,8 @@
 		8371EAAE18B0DF6D008B58AE /* Media */ = {
 			isa = PBXGroup;
 			children = (
+				8371EAC018B0F4D4008B58AE /* nav-bar-background.jpg */,
+				8371EABE18B0F2CA008B58AE /* wsis-uae-logo.jpg */,
 				8371EAAF18B0DF9A008B58AE /* blue_icon.png */,
 			);
 			name = Media;
@@ -318,8 +330,36 @@
 			children = (
 				8371EAB118B0E111008B58AE /* loginViewController.h */,
 				8371EAB218B0E111008B58AE /* loginViewController.m */,
+				8371EAB818B0E8AF008B58AE /* Administrator */,
 			);
 			name = "Log in";
+			sourceTree = "<group>";
+		};
+		8371EAB818B0E8AF008B58AE /* Administrator */ = {
+			isa = PBXGroup;
+			children = (
+				8371EABC18B0E95C008B58AE /* Search Filter */,
+			);
+			name = Administrator;
+			sourceTree = "<group>";
+		};
+		8371EABC18B0E95C008B58AE /* Search Filter */ = {
+			isa = PBXGroup;
+			children = (
+				8371EAB918B0E957008B58AE /* adminSearchViewController.h */,
+				8371EABA18B0E957008B58AE /* adminSearchViewController.m */,
+				8371EABD18B0E984008B58AE /* Search List */,
+			);
+			name = "Search Filter";
+			sourceTree = "<group>";
+		};
+		8371EABD18B0E984008B58AE /* Search List */ = {
+			isa = PBXGroup;
+			children = (
+				8371EAB518B0E8AA008B58AE /* adminListViewController.h */,
+				8371EAB618B0E8AA008B58AE /* adminListViewController.m */,
+			);
+			name = "Search List";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,7 +445,9 @@
 				811A08F218A782F9003EAEA0 /* Main_iPad.storyboard in Resources */,
 				811A08F718A782F9003EAEA0 /* Images.xcassets in Resources */,
 				811A08EF18A782F9003EAEA0 /* Main_iPhone.storyboard in Resources */,
+				8371EABF18B0F2CA008B58AE /* wsis-uae-logo.jpg in Resources */,
 				811A08E618A782F9003EAEA0 /* InfoPlist.strings in Resources */,
+				8371EAC118B0F4D4008B58AE /* nav-bar-background.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,8 +466,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8371EAB718B0E8AA008B58AE /* adminListViewController.m in Sources */,
 				811A093B18A78AA4003EAEA0 /* AFURLConnectionOperation.m in Sources */,
 				811A093D18A78AA4003EAEA0 /* UIImageView+AFNetworking.m in Sources */,
+				8371EABB18B0E957008B58AE /* adminSearchViewController.m in Sources */,
 				811A094018A790B0003EAEA0 /* WSISUAEViewController.m in Sources */,
 				811A094A18A797F3003EAEA0 /* IndicatorsAndStatisticsViewController.m in Sources */,
 				811A091C18A7868E003EAEA0 /* UIImage+ImageWithUIView.m in Sources */,

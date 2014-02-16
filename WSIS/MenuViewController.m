@@ -70,6 +70,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - WSIS Methods
+
+
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

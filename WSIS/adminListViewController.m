@@ -1,26 +1,24 @@
 //
-//  loginViewController.m
+//  adminListViewController.m
 //  WSIS
 //
 //  Created by Codi Admin on 2/16/14.
 //  Copyright (c) 2014 htss. All rights reserved.
 //
 
-#import "loginViewController.h"
+#import "adminListViewController.h"
 #import "AppDelegate.h"
 #import "ECSlidingViewController.h"
 #import "MenuViewController.h"
 
-@interface loginViewController ()
+@interface adminListViewController ()
 {
     AppDelegate *appDelegate;
-    IBOutlet UITextField *txtUsername;
-    IBOutlet UITextField *txtPassword;
 }
 
 @end
 
-@implementation loginViewController
+@implementation adminListViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -52,24 +50,6 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-#pragma mark -
-#pragma mark WSIS Methods
-
-- (IBAction)btnLoginClicked:(id)sender {
-    if ([self validateUser:txtUsername.text password:txtPassword.text]) {
-        [self performSegueWithIdentifier:@"inSucessful" sender:self];
-    }
-}
-
--(BOOL)validateUser:(NSString*)username
-           password:(NSString*)password
-{
-    /*
-     * Test login function
-     */
-    return YES;
 }
 
 @end
