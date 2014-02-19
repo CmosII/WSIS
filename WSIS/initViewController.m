@@ -11,7 +11,9 @@
 
 @interface initViewController ()
 {
-    
+    AppDelegate *appDelegate;
+    IBOutlet UIButton *btnEN;
+    IBOutlet UIButton *btnAR;
 }
 
 @end
@@ -32,6 +34,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    appDelegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
 }
 
 - (void)didReceiveMemoryWarning
@@ -41,8 +44,20 @@
 }
 
 - (IBAction)btnLangClicked:(id)sender {
-    UIButton *btn = sender;
-    btn.hidden = YES;
+   
+}
+
+-(IBAction)btnARClicked:(id)sender {
+   appDelegate.language = @"AR";
+    btnAR.hidden = YES;
+    btnEN.hidden = YES;
+    self.topViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"About WSIS U.A.E"];
+}
+
+-(IBAction)btnENClicked:(id)sender {
+    appDelegate.language = @"EN";
+    btnAR.hidden = YES;
+    btnEN.hidden = YES;
     self.topViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"About WSIS U.A.E"];
 }
 

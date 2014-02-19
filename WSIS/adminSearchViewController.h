@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface adminSearchViewController : UIViewController
+@interface adminSearchViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
 
 @end

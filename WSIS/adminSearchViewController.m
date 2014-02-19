@@ -18,7 +18,10 @@
     IBOutlet UIView *vieSelGovernment;
     IBOutlet UIPickerView *selGov;
     
-    NSArray *govList;
+    
+    IBOutlet UITableView *tblInitiatives;
+    
+    NSArray *govList,*secList,*yearList,*initiativesList;
 }
 
 @end
@@ -86,6 +89,20 @@
     
 }
 
+#pragma mark -
+#pragma mark View Creation
+
+-(void)insertInitiativeTableX:(int)x
+                            Y:(int)y
+                        Width:(int)width
+                       Height:(int)height
+{
+    tblInitiatives = [[UITableView alloc] initWithFrame: CGRectMake(x, y, width, height)];
+    tblInitiatives.dataSource = self;
+    tblInitiatives.delegate = self;
+    [self.view addSubview: tblInitiatives];
+}
+
 #pragma mark - Picker View Source Methods
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
@@ -109,6 +126,42 @@
         return [govList objectAtIndex:row];
     }
     return @"";
+}
+
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    // Return the number of sections.
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    // Return the number of rows in the section.
+    //return [menu count];
+    return initiativesList.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Configure the cell...
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell==nil) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+    }
+    
+    cell.textLabel.text = [NSString stringWithFormat:@"%@",[initiativesList objectAtIndex:indexPath.row]];
+    
+    return cell;
+}
+
+#pragma mark - Table view delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
 }
 
 @end

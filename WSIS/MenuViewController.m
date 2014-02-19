@@ -15,6 +15,8 @@
 {
     AppDelegate *appDelegate;
     NSArray *menu1,*menu2,*menu3,*menu4,*menu5,*menu6,*menu7,*Section,*sectionNames;
+    NSArray *sbmenu1,*sbmenu2,*sbmenu3,*sbmenu4,*sbmenu5,*sbmenu6,*sbmenu7;
+    IBOutlet UILabel *lblBarTitle;
 }
 @end
 
@@ -52,15 +54,40 @@
 {
     [super viewDidAppear:YES];
     
-    menu1 = [NSArray arrayWithObjects:@"Login", nil];
-    menu2 = [NSArray arrayWithObjects:@"About WSIS U.A.E", nil];
-    menu3 = [NSArray arrayWithObjects:@"About UAE ICT",@"Indicators and Statistics", nil];
-    menu4 = [NSArray arrayWithObjects:@"What is WSIS",@"Action Lines",@"Documents",@"Stocktaking",@"WSIS Project Prize 2013",@"WSIS Questionaire", nil];
-    menu5 = [NSArray arrayWithObjects:@"About the Committee",@"UAE WSIS Committee",@"Meetings",@"Documents & Publications", nil];
-    menu6 = [NSArray arrayWithObjects:@"Committee News", @"WSIS News", @"Image Gallery" ,nil];
-    menu7 = [NSArray arrayWithObjects:@"Important Links", nil];
+    if ([appDelegate.language isEqualToString:@"AR"]) {
+        menu1 = [NSArray arrayWithObjects:@"تسجيل الدخول", nil];
+        menu2 = [NSArray arrayWithObjects:@"عن القمة في الإمارات", nil];
+        menu3 = [NSArray arrayWithObjects:@"قطاع الاتصالات في الإمارات",@"مؤشرات و إحصائيات", nil];
+        menu4 = [NSArray arrayWithObjects:@"القمة العالمية حول مجتمع المعلومات",@"خطوط العمل",@"الوثائق",@"تقييم للوضع",@"جائزة القمة 2013",@"استبيان", nil];
+        menu5 = [NSArray arrayWithObjects:@"لجنة القمة",@"اللجنة الإماراتية للقمة",@"اجتماعات القمة",@"وثائق و اصدارات", nil];
+        menu6 = [NSArray arrayWithObjects:@"أخبار اللجنة", @"أخبار القمة", @"معرض الصور" ,nil];
+        menu7 = [NSArray arrayWithObjects:@"روابط تهمك", nil];
+        
+        sectionNames = [NSArray arrayWithObjects:@"المستخدم",@"مبادرات الإمارات",@"قطاع التصالات بالإمارات",@"القمة العالمية لمجتمع المعلومات",@"اللجنة الوطنية",@"الإعلام",@"الروابط", nil];
+        
+        lblBarTitle.text = @"القمة العالمية لمجتمع المعلومات";
+    }else{
+        menu1 = [NSArray arrayWithObjects:@"Login", nil];
+        menu2 = [NSArray arrayWithObjects:@"About WSIS U.A.E", nil];
+        menu3 = [NSArray arrayWithObjects:@"About UAE ICT",@"Indicators and Statistics", nil];
+        menu4 = [NSArray arrayWithObjects:@"What is WSIS",@"Action Lines",@"Documents",@"Stocktaking",@"WSIS Project Prize 2013",@"WSIS Questionaire", nil];
+        menu5 = [NSArray arrayWithObjects:@"About the Committee",@"UAE WSIS Committee",@"Meetings",@"Documents & Publications", nil];
+        menu6 = [NSArray arrayWithObjects:@"Committee News", @"WSIS News", @"Image Gallery" ,nil];
+        menu7 = [NSArray arrayWithObjects:@"Important Links", nil];
+        
+        sectionNames = [NSArray arrayWithObjects:@"User Dashboard",@"UAE initiatives",@"UAE ICT Development",@"WSIS",@"National Committee",@"Media",@"Links", nil];
+        
+        lblBarTitle.text = @"WSIS U.A.E.";
+    }
     
-    sectionNames = [NSArray arrayWithObjects:@"User Dashboard",@"UAE initiatives",@"UAE ICT Development",@"WSIS",@"National Committee",@"Media",@"Links", nil];
+    sbmenu1 = [NSArray arrayWithObjects:@"Login", nil];
+    sbmenu2 = [NSArray arrayWithObjects:@"About WSIS U.A.E", nil];
+    sbmenu3 = [NSArray arrayWithObjects:@"About UAE ICT",@"Indicators and Statistics", nil];
+    sbmenu4 = [NSArray arrayWithObjects:@"What is WSIS",@"Action Lines",@"Documents",@"Stocktaking",@"WSIS Project Prize 2013",@"WSIS Questionaire", nil];
+    sbmenu5 = [NSArray arrayWithObjects:@"About the Committee",@"UAE WSIS Committee",@"Meetings",@"Documents & Publications", nil];
+    sbmenu6 = [NSArray arrayWithObjects:@"Committee News", @"WSIS News", @"Image Gallery" ,nil];
+    sbmenu7 = [NSArray arrayWithObjects:@"Important Links", nil];
+    
     Section = [NSArray arrayWithObjects:menu1,menu2,menu3,menu4,menu5,menu6,menu7, nil];
 }
 
@@ -149,17 +176,35 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    NSArray *thisArray;
     
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
-    NSArray *thisArray = [Section objectAtIndex:indexPath.section];
+    switch (indexPath.section) {
+        case 0:
+            thisArray = sbmenu1;
+            break;
+        case 1:
+            thisArray = sbmenu2;
+            break;
+        case 2:
+            thisArray = sbmenu3;
+            break;
+        case 3:
+            thisArray = sbmenu4;
+            break;
+        case 4:
+            thisArray = sbmenu5;
+            break;
+        case 5:
+            thisArray = sbmenu6;
+            break;
+        case 6:
+            thisArray = sbmenu7;
+            break;
+        default:
+            break;
+    }
+    
     NSString *identifier = [NSString stringWithFormat:@"%@", [thisArray objectAtIndex:indexPath.row]];
-    
     UIViewController *newTopViewController = [self.storyboard instantiateViewControllerWithIdentifier:identifier];
     
     [self.slidingViewController anchorTopViewOffScreenTo:ECRight animations:nil onComplete:^{
